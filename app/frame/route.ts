@@ -11,7 +11,7 @@ const fdk = new PinataFDK({
 export async function GET(req: NextRequest, res: NextResponse) {
   try {
     const frameMetadata = await fdk.getFrameMetadata({
-      post_url: `${process.env.BASE_URL}/frame`,
+      post_url: `https://ipfs.io/ipfs/QmWL2qH8ykwfjonfGKyP16wB9ZsfMsXqtSykNhAVuxYYUF/based_blobs.html`,
       buttons: [{ label: "Mint NFT", action: "post" }], // can probaly add in regenerate button to make new blob
       aspect_ratio: "1:1",
       cid: "QmWL2qH8ykwfjonfGKyP16wB9ZsfMsXqtSykNhAVuxYYUF/based_blobs.html", // likely need to change this
@@ -36,7 +36,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
       const mint = await mintNft(address);
       console.log(mint);
       const frameMetadata = await fdk.getFrameMetadata({
-        post_url: `${process.env.BASE_URL}/redirect`,
+        post_url: `https://ipfs.io/ipfs/QmWL2qH8ykwfjonfGKyP16wB9ZsfMsXqtSykNhAVuxYYUF/based_blobs.html/redirect`,
         buttons: [{ label: "Learn How to Make This", action: "post_redirect" }],
         aspect_ratio: "1:1",
         cid: "QmWL2qH8ykwfjonfGKyP16wB9ZsfMsXqtSykNhAVuxYYUF/based_blobs.html",
@@ -48,7 +48,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
     }
   } else {
     const frameMetadata = await fdk.getFrameMetadata({
-      post_url: `${process.env.BASE_URL}/redirect`,
+      post_url: `https://ipfs.io/ipfs/QmWL2qH8ykwfjonfGKyP16wB9ZsfMsXqtSykNhAVuxYYUF/based_blobs.html/redirect`,
       buttons: [{ label: "Learn How to Make This", action: "post_redirect" }],
       aspect_ratio: "1:1",
       cid: "QmWL2qH8ykwfjonfGKyP16wB9ZsfMsXqtSykNhAVuxYYUF/based_blobs.html",
