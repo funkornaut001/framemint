@@ -14,7 +14,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
       post_url: `${process.env.BASE_URL}/frame`,
       buttons: [{ label: "Mint NFT", action: "post" }], // can probaly add in regenerate button to make new blob
         aspect_ratio: "1:1",
-      image: { url: "https://ipfs.io/ipfs/QmSrDz21mqCP3b8wsZQYdcu2ejnzAXgu9fmjEHvKSp55xs"}
+      image: { url: "https://ipfs.io/ipfs/QmWL2qH8ykwfjonfGKyP16wB9ZsfMsXqtSykNhAVuxYYUF/based_blobs.html"}
     //   cid: "QmSrDz21mqCP3b8wsZQYdcu2ejnzAXgu9fmjEHvKSp55xs", // likely need to change this
     });
     return new NextResponse(frameMetadata);
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         post_url: `${process.env.BASE_URL}/redirect`,
         buttons: [{ label: "Learn How to Make This", action: "post_redirect" }],
         aspect_ratio: "1:1",
-        image: { url: "https://ipfs.io/ipfs/QmSrDz21mqCP3b8wsZQYdcu2ejnzAXgu9fmjEHvKSp55xs"}
+        image: { url: "https://ipfs.io/ipfs/QmWL2qH8ykwfjonfGKyP16wB9ZsfMsXqtSykNhAVuxYYUF/based_blobs.html"}
       });
       return new NextResponse(frameMetadata);
     } catch (error) {
@@ -52,7 +52,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
       post_url: `${process.env.BASE_URL}/redirect`,
       buttons: [{ label: "Learn How to Make This", action: "post_redirect" }],
       aspect_ratio: "1:1",
-      image: { url: "https://ipfs.io/ipfs/QmSrDz21mqCP3b8wsZQYdcu2ejnzAXgu9fmjEHvKSp55xs"}
+      image: { url: "https://ipfs.io/ipfs/QmWL2qH8ykwfjonfGKyP16wB9ZsfMsXqtSykNhAVuxYYUF/based_blobs.html"}
     });
     return new NextResponse(frameMetadata);
   }
