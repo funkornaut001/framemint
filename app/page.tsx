@@ -9,15 +9,15 @@ export default function Home() {
           <p className="text-center">
             Based Blobs is an open collection of unique, algorithmically
             generated blobs. Each blob is stored as an NFT on Base.
-            The collection was created by{" Funkornaut "}to memorialize the Dencun upgrade that introduced 
-            Proto-danksharding and data blobs via Ethereum improvement proposal (EIP)-4844
+            The collection was created by Funkornaut to memorialize the Dencun upgrade that introduced 
+            Proto-danksharding and data blobs via Ethereum improvement proposal (EIP)-4844 
             <a
               href="https://twitter.com/funkornaut"
               className="text-blue-500"
               target="_blank"
               rel="noreferrer"
             >
-              Funkornaut
+              {" "} Funkornaut
             </a>
             .
           </p>
@@ -37,7 +37,7 @@ export default function Home() {
         </div>
         <div className="flex items-center justify-center">
           <Image
-            src="/blob.png"
+            src="/public/blobs.png"
             alt="Based Blobs"
             width={500}
             height={500}
